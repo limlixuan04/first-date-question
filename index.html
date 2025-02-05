@@ -41,11 +41,18 @@
                 // Ensure image is loaded correctly and displayed
                 var img = document.getElementById('cchs-image');
                 img.style.display = 'block'; 
+
+                // Debugging: Check if the image is accessible
+                console.log("Image source: " + img.src); // Log image URL to console
+
                 img.onload = function() {
-                    // Image loaded, you can add additional actions here if needed
+                    // Image loaded successfully
+                    console.log("Image loaded successfully!");
                 };
+                
                 img.onerror = function() {
-                    alert('There was an issue loading the image.');
+                    // Image failed to load
+                    console.log("Error loading image.");
                 };
             } else {
                 // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
