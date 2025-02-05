@@ -3,53 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi Boss 10/02/25 6pm@Chinatown?</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <title>Main Page</title>
 </head>
 <body>
-    <div id="container">
-        <div id="image-container"></div> <!-- Container for displaying images -->
-        <div id="text-container">
-            <div id="question">Hi Boss 10/02/25 6pm@Chinatown?</div> <!-- Question -->
-            <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Yes</button> <!-- Yes button -->
-                <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
-            </div>
-        </div>
-    </div>
 
-    <!-- Hidden 'View Image' link, initially not visible -->
-    <a id="view-image-link" href="javascript:void(0);" onclick="viewImage()" style="display: none;">View Image</a>
+    <h1>Welcome to My Website</h1>
 
-    <script>
-        // Function to handle the Yes/No button clicks
-        function selectOption(option) {
-            if (option === 'yes') {
-                // Display the 'View Image' link after clicking 'Yes'
-                document.getElementById('view-image-link').style.display = 'inline-block'; 
-            } else {
-                // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
-                alert('Maybe next time!');
-            }
-        }
+    <p>This is the main page where you can add your content.</p>
 
-        // Function to display the image when the 'View Image' link is clicked
-        function viewImage() {
-            // Create the image element dynamically and append it to the container
-            var img = document.createElement("img");
-            img.src = "cchs.jpg"; // Set the image source
-            img.alt = "CCHS Image";
-            img.width = 500; // Set the image width
-            
-            // Optionally, you can adjust where the image appears in the container
-            document.getElementById('image-container').appendChild(img); // Appending to the 'image-container'
-        }
+    <!-- Add more content here as needed -->
 
-        // Initially hide the 'View Image' link
-        document.getElementById('view-image-link').style.display = 'none';
-    </script>
-
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    <!-- Image added at the bottom -->
+    <br><br> <!-- Adds spacing -->
+    <img src="cchs.jpg" alt="CCHS Image" width="500">
+    
 </body>
 </html>
+
