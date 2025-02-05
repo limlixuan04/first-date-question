@@ -6,12 +6,6 @@
     <title>Hi Boss 10/02/25 6pm@Chinatown?</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
     <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
-    <style>
-        /* Initially hide the image and the gif */
-        #cat-heart, #cchs-image {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div id="container">
@@ -25,46 +19,8 @@
         </div>
     </div>
 
-    <!-- Hidden cat heart gif, initially not visible -->
-    <img id="cat-heart" src="cat-heart.gif" alt="Cat Heart" width="300">
-    
-    <!-- Hidden CCHS image, initially not visible -->
-    <img id="cchs-image" src="cchs.jpg" alt="CCHS Image" width="500">
-
-    <script>
-        // Function to handle the Yes/No button clicks
-        function selectOption(option) {
-            if (option === 'yes') {
-                // Display the cat heart gif and the image after clicking 'Yes'
-                document.getElementById('cat-heart').style.display = 'block'; 
-                
-                // Ensure image is loaded correctly and displayed
-                var img = document.getElementById('cchs-image');
-                img.style.display = 'block'; 
-
-                // Debugging: Check if the image is accessible
-                console.log("Image source: " + img.src); // Log image URL to console
-
-                img.onload = function() {
-                    // Image loaded successfully
-                    console.log("Image loaded successfully!");
-                };
-                
-                img.onerror = function() {
-                    // Image failed to load
-                    console.log("Error loading image.");
-                };
-            } else {
-                // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
-                alert('Maybe next time!');
-            }
-        }
-        
-        // Ensure everything is hidden initially
-        document.getElementById('cat-heart').style.display = 'none';
-        document.getElementById('cchs-image').style.display = 'none';
-    </script>
-
     <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
+<a href="image.html">View Image</a>
+
