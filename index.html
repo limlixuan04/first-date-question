@@ -37,7 +37,16 @@
             if (option === 'yes') {
                 // Display the cat heart gif and the image after clicking 'Yes'
                 document.getElementById('cat-heart').style.display = 'block'; 
-                document.getElementById('cchs-image').style.display = 'block'; 
+                
+                // Ensure image is loaded correctly and displayed
+                var img = document.getElementById('cchs-image');
+                img.style.display = 'block'; 
+                img.onload = function() {
+                    // Image loaded, you can add additional actions here if needed
+                };
+                img.onerror = function() {
+                    alert('There was an issue loading the image.');
+                };
             } else {
                 // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
                 alert('Maybe next time!');
