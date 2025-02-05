@@ -19,10 +19,36 @@
         </div>
     </div>
 
-    <!-- Image added directly at the end of the page -->
-    <img src="cchs.jpg" alt="CCHS Image" width="500"> <!-- Image appears at the end -->
+    <!-- Hidden 'View Image' link, initially not visible -->
+    <a id="view-image-link" href="javascript:void(0);" onclick="viewImage()" style="display: none;">View Image</a>
+
+    <script>
+        // Function to handle the Yes/No button clicks
+        function selectOption(option) {
+            if (option === 'yes') {
+                // Display the 'View Image' link after clicking 'Yes'
+                document.getElementById('view-image-link').style.display = 'inline-block'; 
+            } else {
+                // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
+                alert('Maybe next time!');
+            }
+        }
+
+        // Function to display the image when the 'View Image' link is clicked
+        function viewImage() {
+            // Create the image element dynamically and append it to the container
+            var img = document.createElement("img");
+            img.src = "cchs.jpg"; // Set the image source
+            img.alt = "CCHS Image";
+            img.width = 500; // Set the image width
+
+            // Append the image to the container (you can change where it appears if needed)
+            document.getElementById('container').appendChild(img);
+        }
+    </script>
 
     <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
+
 
