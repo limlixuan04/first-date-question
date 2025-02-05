@@ -6,6 +6,12 @@
     <title>Hi Boss 10/02/25 6pm@Chinatown?</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
     <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <style>
+        /* Initially hide the image and the gif */
+        #cat-heart, #cchs-image {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -19,8 +25,25 @@
         </div>
     </div>
 
-    <!-- Image added directly at the end of the page -->
-    <img src="cchs.jpg" alt="CCHS Image" width="500"> <!-- Image appears at the end -->
+    <!-- Hidden cat heart gif, initially not visible -->
+    <img id="cat-heart" src="cat-heart.gif" alt="Cat Heart" width="300">
+    
+    <!-- Hidden CCHS image, initially not visible -->
+    <img id="cchs-image" src="cchs.jpg" alt="CCHS Image" width="500">
+
+    <script>
+        // Function to handle the Yes/No button clicks
+        function selectOption(option) {
+            if (option === 'yes') {
+                // Display the cat heart gif and the image after clicking 'Yes'
+                document.getElementById('cat-heart').style.display = 'block'; 
+                document.getElementById('cchs-image').style.display = 'block'; 
+            } else {
+                // If 'No' is clicked, you can handle accordingly (e.g., hide the elements or alert)
+                alert('Maybe next time!');
+            }
+        }
+    </script>
 
     <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
